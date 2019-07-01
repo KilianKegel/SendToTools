@@ -16,9 +16,9 @@
 
 @todo
 @mainpage
-    unarchive support tool
+    rearchive support tool
 @section intro_sec Introduction
-    unarchive clears the archive attribute on given files and directories, passed
+    rearchive sets the archive attribute on given files and directories, passed
     in the command line
 
 @subsection Parm_sec Command line parameters
@@ -33,7 +33,7 @@ int main(int argc, char** argv) {
     int i,isdir;
     FILE* fp;
     char* pCmdLine;
-    char* aszAttribParms0[] = {{"attrib -a \""},{"attrib -a /s \""}};
+    char* aszAttribParms0[] = {{"attrib +a \""},{"attrib +a /s \""}};
     char* aszAttribParms1[] = {{"\""},{"\"\\*.*"}};
 
     for (i = 1; i < argc; i++) {
